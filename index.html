@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+      <h2>Calculator</h2>
+      <div class="display">
+          <input id="userInput" placeholder="0">
+      </div>
+      <div class="buttons">
+        <div class="kiri">
+          <button class="kiri-atas" onclick="clean()">C</button>
+          <button class="kiri-atas" onclick="del()">DEL</button>
+          <button class="kiri-atas" onclick="insert('%')">MOD</button>
+          <script language="JavaScript">
+              for (let i = 9; i >= 1; i--){
+                document.write(`<button class=angka onclick=num(${i})>`+i+`</button>`)
+              } 
+          </script>
+          <button class ="angka" onclick="insert('00')">00</button>
+          <button class ="angka" onclick="insert('0')">0</button>
+          <button class ="angka" onclick="insert('.')">.</button>
+        </div>
+        <div class="kanan">
+          <button class="operasi" onclick="insert('+')">+</button>
+          <button class="operasi" onclick="insert('-')">-</button>
+          <button class="operasi" onclick="insert('*')">*</button>
+          <button class="operasi" onclick="insert('/')">/</button>
+          <button class="operasi" onclick="equal()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
